@@ -23,9 +23,6 @@ const App: React.FC = () => {
       const res = await fetch(`http://openlibrary.org/search.json?${querySubject === 'term' ? 'q' : querySubject}=${query}`);
       const data = await res.json();
 
-      console.log(data.docs);
-      console.log(querySubject);
-      console.log(query);
       setBooks(data.docs);
       setLoading(false);
       setSearchedTerm(query);
@@ -54,12 +51,15 @@ const App: React.FC = () => {
       />
       {error && <p className='error'>{error}</p>}
       {loading && 
-        <ThreeCircles
-          color="red" outerCircleColor="green"
-          height={110}
-          width={110}
-          ariaLabel="three-circles-rotating"
-        />
+        <div className="loading">
+
+          <ThreeCircles
+            color="var(--blue)" outerCircleColor="var(--dark-blue)"
+            height={200}
+            width={200}
+            ariaLabel="three-circles-rotating"
+          />
+        </div>
       }
       <BookList books={books} searchedTerm={searchedTerm}/>
       <Footer />

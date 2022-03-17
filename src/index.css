@@ -1,5 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,700;1,300&family=Open+Sans:wght@300;400;600&display=swap");
+
+:root {
+  --black: #000;
+  --white: #fff;
+  --beige: #c8a588;
+  --orange: #bf5e49;
+  --purple: #4d2d33;
+  --dark-blue: #3b566a;
+  --blue: #6f9c94;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  font-family: "Open Sans", sans-serif;
+  background: var(--white);
 }

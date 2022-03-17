@@ -1,4 +1,6 @@
 import { Search } from "./Search"
+//styles
+import './Header.css';
 
 interface Props {
   query: string;
@@ -21,7 +23,7 @@ export const Header: React.FC<Props> = ({ query, setQuery, querySubject, setQuer
 
   return (
     <header>
-      <button className="brand" onClick={handleReset}>Logo/Reset</button>
+      <button className="brand" onClick={handleReset}>OpenLibrary</button>
       <Search 
         query={query}
         setQuery={setQuery}
